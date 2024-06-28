@@ -1,12 +1,16 @@
+import { Sidebar } from "./Components/shared/Sidebar"
+
 
 
 function App() {
  
 
   return (
-    <>
-      <h1>holamundo</h1>
-    </>
+    <div className="bg-slate-700 min-h-screen w-full">
+
+      <Sidebar/>
+      
+    </div>
   )
 }
 
