@@ -6,14 +6,15 @@ import { RiHome3Fill, RiDiscountPercentFill,RiTeamFill, RiMotorbikeFill,RiPieCha
 
 
 
-export const Sidebar = () => {
+export const Sidebar = ({menu}) => {
   return (
-    <div className='bg-slate-900 fixed left-0 top-0 w-28 h-full text-gray-300 flex flex-col justify-between rounded-tr-xl rounded-br-xl'>
+    <div className={` transition-all bg-slate-900 fixed z-50 ${menu? "-left-full" : "left-0" }  w-28 h-full text-gray-300 flex flex-col justify-between rounded-br-xl `} >
         <div>
         <ul className=' pl-3 mt-10'>
             <li>
                 <h1 className='text-2xl font-bold text-center'>Logo</h1>
             </li>
+            
             <li className='p-2 rounded-tl-lg rounded-bl-lg bg-slate-700 mt-3 '>
                  <NavLink className='bg-orange-600 p-4 block text-2xl rounded-lg text-center'>
                      <RiHome3Fill className='m-auto' /> 
@@ -55,7 +56,7 @@ export const Sidebar = () => {
         </div>
         <div>
             <ul className='pl-2'>
-            <li className=' hover:bg-slate-700 p-2 rounded-tl-lg rounded-bl-lg   transition-colors group'>
+            <li  className=' hover:bg-slate-700 p-2 rounded-tl-lg rounded-bl-lg   transition-colors group'>
                  <NavLink className='group-hover:bg-orange-600 p-4 block text-2xl rounded-lg text-center transition-colors'>
                      <RiLogoutBoxRFill className='m-auto' /> 
                  </NavLink>  
@@ -64,6 +65,8 @@ export const Sidebar = () => {
             </ul>
             
         </div>
+
+
     </div>
   )
 }
